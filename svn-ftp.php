@@ -342,7 +342,7 @@ Options:
         }
         // Get latest revision and read from file
         elseif (ftp_get($conn_id, $pwd . '/' . $config['latest'], $info['ftp']['path'] . '/' . $config['revision_file'], FTP_BINARY)) {
-            $last_revision_from_file = file_get_contents($pwd . '/' . $config['latest']);
+            $last_revision = file_get_contents($pwd . '/' . $config['latest']);
         } else {
             echo FAIL . ": Cannot find {$config['revision_file']} file on the server. \n";
             echo "         Use -u option to set the revision number to current revision number $head. \n";
