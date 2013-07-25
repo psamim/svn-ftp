@@ -32,8 +32,8 @@ Installing
 ----------
 
 - Make sure svn-ftp.php is executable (`chmod +x svn-ftp.php`).
-- Create a symbolic link from svn-ftp.php to \usr\local\bin (`ln -sf 'FULL/PATH/svn-ftp.php' '/usr/local/bin/svn-ftp')
-- Copy config.ini.template to config.ini, review the configurations. (`cp 'config.ini.template' 'config.ini'`)
+- Create a symbolic link from svn-ftp.php to '\usr\local\bin' (`ln -sf 'FULL/PATH/svn-ftp.php' '/usr/local/bin/svn-ftp').
+- Copy config.ini.template to config.ini, review the configurations (```cp 'config.ini.template' 'config.ini'```).
 
 You can do these two steps by running install.sh as root. svn-ftp should be called from inside root
 of a svn repository which is confugured for svn-ftp (has .svn-ftp directory).
