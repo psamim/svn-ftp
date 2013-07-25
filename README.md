@@ -18,7 +18,8 @@ to the server, and not the whole project.
 
 This script asks SVN about modified, added or removed files since the last push to the server,
 and then uploads them via FTP or removes the removed files. Also it updates the file 
-containing the latest revision number pushed to the server (.revision file).
+containing the latest revision number pushed to the server (.revision file). Upon upload, the old
+version on server is renamed to 'file.old'.
 
 There is an option (`--zip` or `-z`) to zip the files, upload them and then unzip them on the
 server to save time and bandwidth (PHP required on the server). FTP credentials are saved to
