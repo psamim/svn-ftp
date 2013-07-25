@@ -1,0 +1,17 @@
+
+
+; Relative path of the local file containig the latest uploaded revision
+latest = "push_config/log"
+
+; Relative path of the temporary files
+temp = "tmppush"
+
+; Relative path to directory of config files (Used for mkdir at init only)
+config_dir = "push_config"
+
+; Name of the file on the server, has the latest revision number
+revision_file = ".revision"
+
+; Default name for config file (not this one)
+config = "config.ini"
+
