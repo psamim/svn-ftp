@@ -2,14 +2,19 @@
 <?php
 
 $help_all = "\n
-    -c FILE               Saves to, or read from the FILE inseatd of 
+    -c FILE               Saves to, or reads from the FILE instead of the
     --config=FILE         default place.
      
     -v                    Displays all errors and warnings.
     --verbose
 
     -h                    Shows help text for each action and exits.
-    --help.";
+    --help.
+
+Actions:
+        init   Creates a .ini configuratoin file, see 'svn-ftp init --help'
+        [push] Uploads changes to server, see 'svn-ftp push --help' 
+               push is the default action, if no action is specified.\n";
 
 // Dependencies
 require_once dirname( __FILE__ )."/inc/Lite.php";
