@@ -465,15 +465,15 @@ if (isset($zip)) {
   $unzip = file_get_contents("http://".$info['ftp']['server']."/dump.php?a1=unzip&".rand(1,1000));
   echo ( ($unzip==0) ? SUCCESS : FAIL ) . ": " . $error[$unzip]. PHP_EOL;
 
-  // $delete = ftp_delete($conn_id, $info['ftp']['path'] . '/dump.php');
-  // if (!$delete) { 
-  //     echo WARNING . ": dump.php could not be deleted, delete manually.\n";
-  // }
+  $delete = ftp_delete($conn_id, $info['ftp']['path'] . '/dump.php');
+  if (!$delete) { 
+      echo WARNING . ": dump.php could not be deleted, delete manually.\n";
+  }
 
-  // $delete = ftp_delete($conn_id, $info['ftp']['path'] . '/zip.zip');
-  // if (!$delete) { 
-  //     echo WARNING . ": Zipped file could not be deleted, delete manually.\n";
-  // }
+  $delete = ftp_delete($conn_id, $info['ftp']['path'] . '/zip.zip');
+  if (!$delete) { 
+      echo WARNING . ": Zipped file could not be deleted, delete manually.\n";
+  }
 
 }
 else {
