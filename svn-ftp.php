@@ -462,7 +462,7 @@ if (isset($zip)) {
   }
 
   // Unzip
-  $unzip = file_get_contents("http://".$info['ftp']['server']."/dump.php?fn=unzip&".rand(1,1000));
+  $unzip = file_get_contents("http://".$info['ftp']['server']."/dump.php?a1=unzip&".rand(1,1000));
   echo ( ($unzip==0) ? SUCCESS : FAIL ) . ": " . $error[$unzip]. PHP_EOL;
 
   $delete = ftp_delete($conn_id, $info['ftp']['path'] . '/dump.php');
