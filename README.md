@@ -37,7 +37,7 @@ Installing
 - Copy config.ini.template to config.ini, review the configurations (`cp 'config.ini.template' 'config.ini' `).
 
 You can do these three steps by running install.sh as root. svn-ftp should be called from inside root
-of a svn repository which is confugured for svn-ftp (has .svn-ftp directory).
+of a svn repository which is configured for svn-ftp (has .svn-ftp directory).
 
 
 First time
