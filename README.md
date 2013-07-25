@@ -28,13 +28,6 @@ Also there are options for uploading a single file (`--file<=FILE>` or `-f<FILE>
 the .revision file on the server to a specific revision number (`--update[=NUMBER]` or `-u[NUMBER]`) and uploading
 a specific revision (`--revision<=NUMBER>` or `-r<NUMBER>`).
 
-
-Known Issues
-------------
-
-* See [svn-ftp issues on GitHub] for open issues
-
-
 Installing
 ----------
 
@@ -57,6 +50,10 @@ Usage
 	$ svn commit -m 'my commit'
     $ svn-ftp
 
+Known Issues
+------------
+
+* See [svn-ftp issues on GitHub] for open issues
 
 Limitations
 -----------
