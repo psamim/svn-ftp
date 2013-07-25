@@ -336,16 +336,19 @@ Options:
             bye();
         }
         
-        // Get latest revision and save it to the file
-        if (ftp_get($conn_id, $pwd . '/' . $config['latest'], $info['ftp']['path'] . '/' . $config['revision_file'], FTP_BINARY)) {
+        // Get the latest uploaded commit from file or -r argument
+        if(isset($revision_override)){
+            $last_revision = $revision_override;
+        }
+        // Get latest revision and read from file
+        elseif (ftp_get($conn_id, $pwd . '/' . $config['latest'], $info['ftp']['path'] . '/' . $config['revision_file'], FTP_BINARY)) {
+            $last_revision_from_file = file_get_contents($pwd . '/' . $config['latest']);
         } else {
             echo FAIL . ": Cannot find {$config['revision_file']} file on the server. \n";
             echo "         Use -u option to set the revision number to current revision number $head. \n";
             bye();
         }
-        
-        $last_revision_from_file = file_get_contents($pwd . '/' . $config['latest']);
-        
+        echo "         Revision number $last_revision \n"; // Indent is OK!!      
         
         
         /**
@@ -354,11 +357,7 @@ Options:
         
         // If result is false to end of script, lastest revision is not updated
         $result = true;
-        
-        // Get the latest uploaded commit from file or -r argument
-        $last_revision = isset($revision_override) ? $revision_override : $last_revision_from_file;
-        echo "         Revision number $last_revision \n"; // Indent is OK!!
-        
+            
         // If everything is up to date, exit
         if ($head == $last_revision && !isset($file_override)) {
             echo "Everything is up to date to the latest revision number $last_revision \n";
