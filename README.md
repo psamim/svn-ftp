@@ -57,8 +57,6 @@ Limitations
 -----------
 
 * Windows and OS X: I have not tested this script on Windows and OS X. Thanks for helping me out fixing bugs on these platforms.
-* git-ftp as deployment tool: git-ftp was not designed as centralized deployment tool. While running git-ftp, you have to take care, no one pushes or touches this repo (e.g. no commits, no checkouts, no file modifications)!
-
 
 Contributions
 -------------
