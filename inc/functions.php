@@ -70,5 +70,6 @@ define('IGNORED', "\033[33mIGNORED\033[37m");
 
 function bye() {
   global $pwd, $config;
+  echo "\033[0m"; // Changes color to defult
   delTree( $pwd . '/' .$config['temp'] );die();
 }
