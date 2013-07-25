@@ -4,10 +4,10 @@
 latest = "push_config/log"
 
 ; Relative path of the temporary files
-temp = "tmppush"
+temp = "tmp-svn-ftp"
 
 ; Relative path to directory of config files (Used for mkdir at init only)
-config_dir = "push_config"
+config_dir = ".svn-ftp"
 
 ; Name of the file on the server, has the latest revision number
 revision_file = ".revision"
